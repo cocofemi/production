@@ -17,6 +17,7 @@ jobs:
       - run:
           name: "Say hello"
           command: "echo Hello, World!"
+          
   create_and_deploy_front_end:
     docker:
       - image: amazon/aws-cli
@@ -37,3 +38,4 @@ workflows:
   say-hello-workflow:
     jobs:
       - say-hello
+      - create_and_deploy_front_end
